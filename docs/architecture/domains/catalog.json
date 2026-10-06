@@ -106,7 +106,7 @@
       "allowedConsumers": [],
       "characterizationScenarios": [
         {
-          "name": "Compositor sessions preserve layer state, save behavior, and widget integration",
+          "name": "Compositor sessions preserve layer state and save behavior",
           "checks": [
             "src/renderer/extensions/compositor/composables/compositorSession.test.ts",
             "src/renderer/extensions/compositor/composables/compositorSave.test.ts",
@@ -121,7 +121,7 @@
       ],
       "adrs": [],
       "compatibilityPromises": [
-        "The core extension, Vue-node adapter, and LiteGraph widget remain the host integration seams.",
+        "The core extension and Vue-node adapter remain the characterized host integration seams.",
         "Layer state and save behavior remain characterized independently of presentation."
       ],
       "enforcement": {
