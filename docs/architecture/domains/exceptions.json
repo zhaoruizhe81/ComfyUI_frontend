@@ -159,21 +159,9 @@
       "owner": "@Comfy-Org/comfy_frontend_devs",
       "rationale": "LiteGraph widget types currently depend on the image-compositor renderer's value type.",
       "sunset": "2027-03-31",
-      "removalCriteria": "Relocate CompositorWidgetValue to a neutral shared contract and migrate the characterized LiteGraph dependency.",
+      "removalCriteria": "Move CompositorWidgetValue and the CompositorLayerState shape it derives from into src/lib/ or src/base/, then migrate the characterized LiteGraph dependency.",
       "exactFingerprints": [
         "deep-import:image-compositor:src/lib/litegraph/src/types/widgets.ts->src/renderer/extensions/compositor/components/types.ts#1"
-      ],
-      "fingerprintPrefixes": []
-    },
-    {
-      "id": "DDD-EX-013",
-      "owner": "@jtydhr88",
-      "rationale": "Compositor application helpers currently consume renderer-owned widget value types.",
-      "sunset": "2027-03-31",
-      "removalCriteria": "Move compositor widget value contracts out of presentation and remove both characterized dependency occurrences.",
-      "exactFingerprints": [
-        "forbidden-edge:image-compositor->image-compositor:src/renderer/extensions/compositor/composables/compositorWidgets.ts->src/renderer/extensions/compositor/components/types.ts#1",
-        "forbidden-edge:image-compositor->image-compositor:src/renderer/extensions/compositor/composables/compositorWidgets.ts->src/renderer/extensions/compositor/components/types.ts#2"
       ],
       "fingerprintPrefixes": []
     }
