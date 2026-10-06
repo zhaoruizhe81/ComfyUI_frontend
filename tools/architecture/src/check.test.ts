@@ -662,23 +662,20 @@ describe('baseline admission and catalog stability', () => {
     expect(readFileSync(filename, 'utf8')).toBe(before)
   })
 
-  test('stable JSON uses formatter-compatible owner layouts', () => {
-    expect(stableJson({ owners: ['@one'] })).toContain('"owners": ["@one"]')
-    expect(stableJson({ owners: ['@one', '@two'] })).toContain(
-      '"owners": ["@one", "@two"]'
-    )
-    expect(stableJson({ owners: ['@one', '@two', '@three'] })).toContain(
-      '"owners": ["@one", "@two", "@three"]'
-    )
-    expect(
-      stableJson({
-        owners: [
-          '@Comfy-Org/comfy_frontend_developers_with_a_long_name',
-          '@Comfy-Org/comfy_website_developers_with_a_long_name'
-        ]
-      })
-    ).toContain('"owners": [\n')
-  })
+  test.for([
+    ['fits in 80 columns with its comma', 27],
+    ['needs 81 columns with its comma', 28]
+  ] as const)(
+    'catalog owners line that %s matches oxfmt',
+    async ([, ownerLength]) => {
+      const { format } = await import('oxfmt')
+      const config = JSON.parse(readFileSync('.oxfmtrc.json', 'utf8'))
+      const owners = ['@'.padEnd(28, 'a'), '@'.padEnd(ownerLength, 'b')]
+      const output = stableJson({ domains: [{ owners, adrs: [] }] })
+      const { code } = await format('catalog.json', output, config)
+      expect(output).toBe(code)
+    }
+  )
 
   test('catalog checks tolerate formatter-only JSON layout changes', () => {
     const root = createConfiguredRepository()

@@ -31,7 +31,6 @@
 /src/extensions/core/imageCompare.ts                                                @jtydhr88 @Comfy-Org/comfy_frontend_devs
 /src/renderer/extensions/vueNodes/widgets/components/WidgetImageCompare.vue         @jtydhr88 @Comfy-Org/comfy_frontend_devs
 /src/renderer/extensions/vueNodes/widgets/components/WidgetImageCompare.test.ts     @jtydhr88 @Comfy-Org/comfy_frontend_devs
-/src/renderer/extensions/vueNodes/widgets/components/WidgetImageCompare.stories.ts  @jtydhr88 @Comfy-Org/comfy_frontend_devs
 /src/renderer/extensions/vueNodes/widgets/composables/useImageCompareImages.ts      @jtydhr88 @Comfy-Org/comfy_frontend_devs
 /src/renderer/extensions/vueNodes/widgets/composables/useImageCompareImages.test.ts @jtydhr88 @Comfy-Org/comfy_frontend_devs
 /src/renderer/extensions/vueNodes/widgets/composables/useImageCompareWidget.ts      @jtydhr88 @Comfy-Org/comfy_frontend_devs

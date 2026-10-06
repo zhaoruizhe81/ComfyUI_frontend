@@ -110,9 +110,9 @@
     {
       "id": "DDD-EX-009",
       "owner": "@jtydhr88",
-      "rationale": "The image-crop application composable currently imports presentation while its orchestration boundary is extracted.",
+      "rationale": "The application-role useImageCrop test renders the WidgetImageCrop presentation component.",
       "sunset": "2027-03-31",
-      "removalCriteria": "Move image-crop presentation composition out of useImageCrop and remove the characterized dependency occurrence.",
+      "removalCriteria": "Move the WidgetImageCrop component tests from useImageCrop.test.ts into src/components/imagecrop/WidgetImageCrop.test.ts and remove the characterized dependency occurrence.",
       "exactFingerprints": [
         "forbidden-edge:image-crop->image-crop:src/composables/useImageCrop.test.ts->src/components/imagecrop/WidgetImageCrop.vue#1"
       ],

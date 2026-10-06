@@ -24,7 +24,7 @@
   "allowedConsumers": [],
   "characterizationScenarios": [
     {
-      "name": "Painter input and drawing operations preserve widget behavior",
+      "name": "Painter settings, canvas sizing, input image, and mask serialization preserve widget behavior",
       "checks": [
         "src/components/painter/WidgetPainter.test.ts",
         "src/composables/painter/usePainter.test.ts"
@@ -34,7 +34,7 @@
   "adrs": [],
   "compatibilityPromises": [
     "The core extension, Vue-node adapter, and LiteGraph widget remain integration seams.",
-    "Painter drawing behavior remains covered independently of presentation."
+    "Painter settings and mask serialization remain covered independently of presentation."
   ],
   "enforcement": { "deepImports": "baseline", "dependencies": "baseline" }
 }

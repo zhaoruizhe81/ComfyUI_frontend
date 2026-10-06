@@ -929,12 +929,10 @@ export const stableJson = (value: unknown): string =>
       '"fingerprintPrefixes": ["$1"]'
     )
     .replace(
-      /^(\s*)"owners": \[\n((?:\s+"[^"]+",?\n)+)\s+\]/gm,
-      (block, indentation: string, ownerLines: string) => {
-        const owners = [...ownerLines.matchAll(/"([^"]+)"/g)].map(
-          ([, owner]) => `"${owner}"`
-        )
-        const collapsed = `${indentation}"owners": [${owners.join(', ')}]`
+      /^(\s*)"owners": \[\n((?:\s+"[^"]+",?\n)+)\s+\](,?)$/gm,
+      (block, indentation: string, ownerLines: string, comma: string) => {
+        const owners = ownerLines.trim().split(/,\s+/).join(', ')
+        const collapsed = `${indentation}"owners": [${owners}]${comma}`
         return collapsed.length <= 80 ? collapsed : block
       }
     )}\n`

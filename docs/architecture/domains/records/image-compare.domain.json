@@ -3,7 +3,7 @@
   "schemaVersion": 1,
   "id": "image-compare",
   "capability": "Image compare",
-  "description": "Image comparison presentation, image selection behavior, extension registration, and LiteGraph widget integration.",
+  "description": "Image comparison presentation, image selection behavior, Vue-node adaptation, extension registration, and LiteGraph widget integration.",
   "expectedFileCount": 7,
   "modules": [
     {
@@ -50,7 +50,7 @@
   ],
   "adrs": [],
   "compatibilityPromises": [
-    "The core extension and LiteGraph widget remain the host integration seams.",
+    "The core extension, Vue-node adapter, and LiteGraph widget remain the host integration seams.",
     "Image selection remains isolated from compare presentation."
   ],
   "enforcement": { "deepImports": "baseline", "dependencies": "baseline" }
