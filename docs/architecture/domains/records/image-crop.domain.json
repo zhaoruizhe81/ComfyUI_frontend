@@ -4,7 +4,6 @@
   "id": "image-crop",
   "capability": "Image crop",
   "description": "Image-crop presentation, composable behavior, extension registration, and LiteGraph widget integration.",
-  "expectedFileCount": 6,
   "modules": [
     { "path": "src/components/imagecrop/**", "role": "presentation" },
     { "path": "src/composables/useImageCrop.ts", "role": "application" },
