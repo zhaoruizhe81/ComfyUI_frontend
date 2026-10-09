@@ -665,10 +665,9 @@ describe('baseline admission and catalog stability', () => {
     'catalog owners line that %s matches oxfmt',
     async ([, ownerLength]) => {
       const { format } = await import('oxfmt')
-      const config = JSON.parse(readFileSync('.oxfmtrc.json', 'utf8'))
       const owners = ['@'.padEnd(28, 'a'), '@'.padEnd(ownerLength, 'b')]
       const output = stableJson({ domains: [{ owners, adrs: [] }] })
-      const { code } = await format('catalog.json', output, config)
+      const { code } = await format('catalog.json', output, { printWidth: 80 })
       expect(output).toBe(code)
     }
   )
