@@ -4,7 +4,6 @@
   "id": "image-compare",
   "capability": "Image compare",
   "description": "Image comparison presentation, image selection behavior, Vue-node adaptation, extension registration, and LiteGraph widget integration.",
-  "expectedFileCount": 7,
   "modules": [
     {
       "path": "src/renderer/extensions/vueNodes/widgets/components/WidgetImageCompare.vue",

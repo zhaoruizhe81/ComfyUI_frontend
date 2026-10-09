@@ -6,7 +6,6 @@
       "id": "image-compare",
       "capability": "Image compare",
       "description": "Image comparison presentation, image selection behavior, Vue-node adaptation, extension registration, and LiteGraph widget integration.",
-      "expectedFileCount": 7,
       "modules": [
         {
           "path": "src/renderer/extensions/vueNodes/widgets/components/WidgetImageCompare.vue",
@@ -65,7 +64,6 @@
       "id": "image-compositor",
       "capability": "Image compositor",
       "description": "Layered image-composition presentation, editing orchestration, extension registration, Vue-node adaptation, and LiteGraph widget integration.",
-      "expectedFileCount": 25,
       "modules": [
         {
           "path": "src/renderer/extensions/compositor/components/WidgetCompositor.vue",
@@ -134,7 +132,6 @@
       "id": "image-crop",
       "capability": "Image crop",
       "description": "Image-crop presentation, composable behavior, extension registration, and LiteGraph widget integration.",
-      "expectedFileCount": 6,
       "modules": [
         {
           "path": "src/components/imagecrop/**",
@@ -185,7 +182,6 @@
       "id": "mask-editor",
       "capability": "Mask editor",
       "description": "Mask editing UI, drawing operations, editor state, and the core extension contract.",
-      "expectedFileCount": 85,
       "modules": [
         {
           "path": "src/extensions/core/maskeditor/**",
@@ -217,6 +213,10 @@
         },
         {
           "path": "src/extensions/core/maskeditor.ts",
+          "role": "integration"
+        },
+        {
+          "path": "src/extensions/core/maskeditor.test.ts",
           "role": "integration"
         }
       ],
@@ -255,7 +255,6 @@
       "id": "painter",
       "capability": "Painter",
       "description": "Painter presentation, drawing behavior, Vue-node adaptation, extension registration, and LiteGraph widget integration.",
-      "expectedFileCount": 7,
       "modules": [
         {
           "path": "src/components/painter/**",
@@ -306,7 +305,6 @@
       "id": "workflow-templates",
       "capability": "Workflow templates",
       "description": "Template discovery, ranking, metadata, education, and thumbnail presentation.",
-      "expectedFileCount": 26,
       "modules": [
         {
           "path": "src/platform/workflow/templates/types/**",
@@ -389,10 +387,8 @@
         "deep-import:mask-editor:src/composables/useCoreCommands.selectOnly.test.ts->src/stores/maskEditorStore.ts#1",
         "deep-import:mask-editor:src/composables/useCoreCommands.ts->src/stores/maskEditorStore.ts#1",
         "deep-import:mask-editor:src/extensions/core/index.ts->src/extensions/core/maskeditor.ts#1",
-        "deep-import:mask-editor:src/renderer/extensions/vueNodes/components/ImagePreview.vue->src/composables/maskeditor/useMaskEditor.ts#1",
-        "deep-import:mask-editor:src/services/litegraphService.ts->src/composables/maskeditor/useMaskEditor.ts#1"
-      ],
-      "fingerprintPrefixes": ["deep-import:mask-editor:"]
+        "deep-import:mask-editor:src/renderer/extensions/vueNodes/components/ImagePreview.vue->src/composables/maskeditor/useMaskEditor.ts#1"
+      ]
     },
     {
       "id": "DDD-EX-004",
@@ -403,7 +399,6 @@
       "exactFingerprints": [
         "anonymous-suppression:src/base/common/downloadUtil.test.ts:comfy/no-restricted-paths#1",
         "anonymous-suppression:src/base/common/downloadUtil.ts:comfy/no-restricted-paths#1",
-        "anonymous-suppression:src/base/common/downloadUtil.ts:comfy/no-restricted-paths#2",
         "anonymous-suppression:src/lib/litegraph/src/LGraphCanvas.slotHitDetection.test.ts:comfy/no-restricted-paths#1",
         "anonymous-suppression:src/lib/litegraph/src/canvas/getCanvasContextMenuTarget.test.ts:comfy/no-restricted-paths#1",
         "anonymous-suppression:src/platform/missingMedia/missingMediaStore.ts:comfy/no-restricted-paths#1",
@@ -423,8 +418,7 @@
         "anonymous-suppression:src/workbench/extensions/agent/AgentPanelRoot.vue:comfy/no-restricted-paths#1",
         "anonymous-suppression:src/workbench/extensions/agent/AgentPanelRoot.vue:comfy/no-restricted-paths#2",
         "anonymous-suppression:src/workbench/extensions/agent/crdt/loadImageLivePreview.test.ts:comfy/no-restricted-paths#1"
-      ],
-      "fingerprintPrefixes": ["anonymous-suppression:"]
+      ]
     },
     {
       "id": "DDD-EX-005",
@@ -437,8 +431,7 @@
         "forbidden-edge:mask-editor->mask-editor:src/composables/maskeditor/useMaskEditor.test.ts->src/components/maskeditor/dialog/TopBarHeader.vue#1",
         "forbidden-edge:mask-editor->mask-editor:src/composables/maskeditor/useMaskEditor.ts->src/components/maskeditor/MaskEditorContent.vue#1",
         "forbidden-edge:mask-editor->mask-editor:src/composables/maskeditor/useMaskEditor.ts->src/components/maskeditor/dialog/TopBarHeader.vue#1"
-      ],
-      "fingerprintPrefixes": []
+      ]
     },
     {
       "id": "DDD-EX-006",
@@ -451,8 +444,7 @@
         "deep-import:image-crop:src/extensions/core/index.ts->src/extensions/core/imageCrop.ts#1",
         "deep-import:image-crop:src/lib/litegraph/src/widgets/widgetMap.ts->src/lib/litegraph/src/widgets/ImageCropWidget.ts#1",
         "deep-import:image-crop:src/renderer/extensions/vueNodes/widgets/registry/widgetRegistry.ts->src/components/imagecrop/WidgetImageCrop.vue#1"
-      ],
-      "fingerprintPrefixes": []
+      ]
     },
     {
       "id": "DDD-EX-007",
@@ -465,8 +457,7 @@
         "deep-import:image-compare:src/lib/litegraph/src/widgets/widgetMap.ts->src/lib/litegraph/src/widgets/ImageCompareWidget.ts#1",
         "deep-import:image-compare:src/renderer/extensions/vueNodes/widgets/registry/widgetRegistry.ts->src/renderer/extensions/vueNodes/widgets/components/WidgetImageCompare.vue#1",
         "deep-import:image-compare:src/scripts/widgets.ts->src/renderer/extensions/vueNodes/widgets/composables/useImageCompareWidget.ts#1"
-      ],
-      "fingerprintPrefixes": []
+      ]
     },
     {
       "id": "DDD-EX-008",
@@ -479,8 +470,7 @@
         "deep-import:painter:src/lib/litegraph/src/widgets/widgetMap.ts->src/lib/litegraph/src/widgets/PainterWidget.ts#1",
         "deep-import:painter:src/renderer/extensions/vueNodes/widgets/registry/widgetRegistry.ts->src/components/painter/WidgetPainter.vue#1",
         "deep-import:painter:src/scripts/widgets.ts->src/renderer/extensions/vueNodes/widgets/composables/usePainterWidget.ts#1"
-      ],
-      "fingerprintPrefixes": []
+      ]
     },
     {
       "id": "DDD-EX-009",
@@ -490,8 +480,7 @@
       "removalCriteria": "Move the WidgetImageCrop component tests from useImageCrop.test.ts into src/components/imagecrop/WidgetImageCrop.test.ts and remove the characterized dependency occurrence.",
       "exactFingerprints": [
         "forbidden-edge:image-crop->image-crop:src/composables/useImageCrop.test.ts->src/components/imagecrop/WidgetImageCrop.vue#1"
-      ],
-      "fingerprintPrefixes": []
+      ]
     },
     {
       "id": "DDD-EX-010",
@@ -504,8 +493,7 @@
         "forbidden-edge:painter->mask-editor:src/composables/painter/usePainter.ts->src/composables/maskeditor/StrokeProcessor.ts#1",
         "forbidden-edge:painter->mask-editor:src/composables/painter/usePainter.ts->src/composables/maskeditor/brushUtils.ts#1",
         "forbidden-edge:painter->mask-editor:src/composables/painter/usePainter.ts->src/extensions/core/maskeditor/types.ts#1"
-      ],
-      "fingerprintPrefixes": []
+      ]
     },
     {
       "id": "DDD-EX-011",
@@ -526,8 +514,7 @@
         "deep-import:image-compositor:src/renderer/extensions/layerEditor/composables/useLayerEditorSession.test.ts->src/renderer/extensions/compositor/composables/compositorLayerState.ts#1",
         "deep-import:image-compositor:src/renderer/extensions/vueNodes/widgets/registry/widgetRegistry.ts->src/renderer/extensions/compositor/components/WidgetCompositor.vue#1",
         "deep-import:image-compositor:src/scripts/widgets.ts->src/renderer/extensions/vueNodes/widgets/composables/useCompositorWidget.ts#1"
-      ],
-      "fingerprintPrefixes": []
+      ]
     },
     {
       "id": "DDD-EX-012",
@@ -537,8 +524,7 @@
       "removalCriteria": "Move CompositorWidgetValue and the CompositorLayerState shape it derives from into src/lib/ or src/base/, then migrate the characterized LiteGraph dependency.",
       "exactFingerprints": [
         "deep-import:image-compositor:src/lib/litegraph/src/types/widgets.ts->src/renderer/extensions/compositor/components/types.ts#1"
-      ],
-      "fingerprintPrefixes": []
+      ]
     }
   ]
 }

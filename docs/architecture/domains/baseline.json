@@ -3,7 +3,6 @@
   "violations": [
     "anonymous-suppression:src/base/common/downloadUtil.test.ts:comfy/no-restricted-paths#1",
     "anonymous-suppression:src/base/common/downloadUtil.ts:comfy/no-restricted-paths#1",
-    "anonymous-suppression:src/base/common/downloadUtil.ts:comfy/no-restricted-paths#2",
     "anonymous-suppression:src/lib/litegraph/src/LGraphCanvas.slotHitDetection.test.ts:comfy/no-restricted-paths#1",
     "anonymous-suppression:src/lib/litegraph/src/canvas/getCanvasContextMenuTarget.test.ts:comfy/no-restricted-paths#1",
     "anonymous-suppression:src/platform/missingMedia/missingMediaStore.ts:comfy/no-restricted-paths#1",
@@ -50,7 +49,6 @@
     "deep-import:mask-editor:src/composables/useCoreCommands.ts->src/stores/maskEditorStore.ts#1",
     "deep-import:mask-editor:src/extensions/core/index.ts->src/extensions/core/maskeditor.ts#1",
     "deep-import:mask-editor:src/renderer/extensions/vueNodes/components/ImagePreview.vue->src/composables/maskeditor/useMaskEditor.ts#1",
-    "deep-import:mask-editor:src/services/litegraphService.ts->src/composables/maskeditor/useMaskEditor.ts#1",
     "deep-import:painter:src/extensions/core/index.ts->src/extensions/core/painter.ts#1",
     "deep-import:painter:src/lib/litegraph/src/widgets/widgetMap.ts->src/lib/litegraph/src/widgets/PainterWidget.ts#1",
     "deep-import:painter:src/renderer/extensions/vueNodes/widgets/registry/widgetRegistry.ts->src/components/painter/WidgetPainter.vue#1",

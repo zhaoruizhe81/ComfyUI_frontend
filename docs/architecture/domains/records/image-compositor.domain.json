@@ -4,7 +4,6 @@
   "id": "image-compositor",
   "capability": "Image compositor",
   "description": "Layered image-composition presentation, editing orchestration, extension registration, Vue-node adaptation, and LiteGraph widget integration.",
-  "expectedFileCount": 25,
   "modules": [
     {
       "path": "src/renderer/extensions/compositor/components/WidgetCompositor.vue",

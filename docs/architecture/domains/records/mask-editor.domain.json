@@ -4,7 +4,6 @@
   "id": "mask-editor",
   "capability": "Mask editor",
   "description": "Mask editing UI, drawing operations, editor state, and the core extension contract.",
-  "expectedFileCount": 85,
   "modules": [
     { "path": "src/extensions/core/maskeditor/**", "role": "domain" },
     { "path": "src/composables/maskeditor/**", "role": "application" },
@@ -13,7 +12,11 @@
     { "path": "src/stores/maskEditorStore.test.ts", "role": "application" },
     { "path": "src/stores/maskEditorDataStore.test.ts", "role": "application" },
     { "path": "src/components/maskeditor/**", "role": "presentation" },
-    { "path": "src/extensions/core/maskeditor.ts", "role": "integration" }
+    { "path": "src/extensions/core/maskeditor.ts", "role": "integration" },
+    {
+      "path": "src/extensions/core/maskeditor.test.ts",
+      "role": "integration"
+    }
   ],
   "publicEntryPoints": [],
   "owners": ["@trsommer", "@jtydhr88", "@Comfy-Org/comfy_frontend_devs"],

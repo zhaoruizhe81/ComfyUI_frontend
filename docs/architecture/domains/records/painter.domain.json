@@ -4,7 +4,6 @@
   "id": "painter",
   "capability": "Painter",
   "description": "Painter presentation, drawing behavior, Vue-node adaptation, extension registration, and LiteGraph widget integration.",
-  "expectedFileCount": 7,
   "modules": [
     { "path": "src/components/painter/**", "role": "presentation" },
     { "path": "src/composables/painter/**", "role": "application" },
